@@ -45,11 +45,10 @@ function App() {
     setData([newItem, ...data]);
   };
 
-  const onRemove = (targetid) => {
-    alert(`${targetid}번째 일기가 삭제되었습니다`);
-    const newDiaryList = data.filter((it) => it.id !== targetid);
+  const onRemove = (tid) => {
+    alert(`${tid}번째 일기가 삭제되었습니다`);
+    const newDiaryList = data.filter((it) => it.id !== tid);
     setData(newDiaryList);
-    dataId.current += 1;
   };
 
   const onEdit = (targetid, newContent) => {
@@ -62,7 +61,7 @@ function App() {
   return (
     <div className="App">
       <DiaryEditor onCreate={onCreate} />
-      <DiaryList onDelete={onRemove} diaryList={data} onEdit={onEdit} />
+      <DiaryList onRemove={onRemove} diaryList={data} onEdit={onEdit} />
     </div>
   );
 }

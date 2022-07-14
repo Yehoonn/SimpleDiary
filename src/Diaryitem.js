@@ -70,9 +70,7 @@ const Diaryitem = ({
       ) : (
         <>
           <button onClick={toggleedit}>수정</button>
-          <button className="delete" onClick={handleRemove}>
-            삭제
-          </button>
+          <button onClick={handleRemove}>삭제</button>
         </>
       )}
     </div>

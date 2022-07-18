@@ -46,7 +46,7 @@ function App() {
   };
 
   const onRemove = (tid) => {
-    alert(`${tid}번째 일기가 삭제되었습니다`);
+    alert(`일기가 삭제되었습니다`);
     const newDiaryList = data.filter((it) => it.id !== tid);
     setData(newDiaryList);
   };

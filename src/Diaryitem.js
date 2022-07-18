@@ -18,7 +18,7 @@ const Diaryitem = ({
   };
 
   const handleRemove = () => {
-    if (window.confirm(`${id}번째 일기를 삭제하시겠습니까?`)) {
+    if (window.confirm(`일기를 삭제하시겠습니까?`)) {
       onRemove(id);
     }
   };
